@@ -17,10 +17,13 @@ jobs:
         node-version: '22.x'
 
     - name: Install Dependencies
+      working-directory: myExpressApp
       run: npm install
 
     - name: Run Tests
+      working-directory: myExpressApp
       run: npm test
 
     - name: Build
+      working-directory: myExpressApp
       run: npm run build
